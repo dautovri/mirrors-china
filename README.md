@@ -1,9 +1,9 @@
-# China
-Repos for Data Science 
+# Repositories in China
 
-## Python
+
+### Python
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
 
-## Maven (Java, Scala)
+### Maven (Java, Scala)
 http://maven.aliyun.com/nexus/content/groups/public/
 
