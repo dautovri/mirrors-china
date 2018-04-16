@@ -1,7 +1,9 @@
 # Repositories in China
 
 Tsinghua University mirrors (Ubuntu, Fedora, Arch, Debian)
+
 https://mirrors.tuna.tsinghua.edu.cn/
+
 
 ### Python
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
