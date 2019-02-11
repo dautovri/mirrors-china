@@ -1,5 +1,5 @@
 # Repositories in China
-How to config the pyhton and scala mirrors
+How to config the python and scala mirrors
 
 ## Tsinghua University mirrors (Ubuntu, Fedora, Arch, Debian)
 
