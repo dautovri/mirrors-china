@@ -1,6 +1,7 @@
 # Repositories in China
+How to config the pyhton and scala mirrors
 
-Tsinghua University mirrors (Ubuntu, Fedora, Arch, Debian)
+## Tsinghua University mirrors (Ubuntu, Fedora, Arch, Debian)
 
 https://mirrors.tuna.tsinghua.edu.cn/
 
@@ -43,3 +44,15 @@ sonatype-oss-releases
 maven-central
 sonatype-oss-snapshots
 ```
+
+More mirrors 
+
+* Alibaba：http://mirrors.aliyun.com/
+* NetEase：http://mirrors.163.com/
+* Sohu：http://mirrors.sohu.com/
+* Xiamen University: http://mirrors.xmu.edu.cn/
+* Shanghai Jiaotong University: http://ftp.sjtu.edu.cn/
+* University of Science and Technology of China: http://mirrors.ustc.edu.cn/
+* Northeastern University: http://mirror.neu.edu.cn/
+* Zhejiang University: http://mirrors.zju.edu.cn/
+* Neusoft Institute of Information: http://mirrors.neusoft.edu.cn/
