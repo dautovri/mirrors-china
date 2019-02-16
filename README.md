@@ -17,6 +17,12 @@ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/m
 conda config --set show_channel_urls yes
 ```
 
+### Docker 
+
+Add docker mirror
+```
+docker --registry-mirror=https://registry.docker-cn.com daemon
+```
 
 ### Maven (Java, Scala)
 
