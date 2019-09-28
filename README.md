@@ -29,6 +29,8 @@ docker --registry-mirror=https://registry.docker-cn.com daemon
 
 ### brew
 
+Add brew mirror 
+
 ```
 git -C "$(brew --repo)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
 
@@ -37,7 +39,6 @@ git -C "$(brew --repo homebrew/core)" remote set-url origin https://mirrors.tuna
 git -C "$(brew --repo homebrew/cask)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git
 
 brew update
-
 ```
 
 ### Maven (Java, Scala)
