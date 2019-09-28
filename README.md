@@ -15,6 +15,9 @@ https://mirrors.tuna.tsinghua.edu.cn/
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
 conda config --set show_channel_urls yes
+
+
+conda update conda 
 ```
 
 ### Docker 
@@ -22,6 +25,19 @@ conda config --set show_channel_urls yes
 Add docker mirror
 ```
 docker --registry-mirror=https://registry.docker-cn.com daemon
+```
+
+### brew
+
+```
+git -C "$(brew --repo)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
+
+git -C "$(brew --repo homebrew/core)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
+
+git -C "$(brew --repo homebrew/cask)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git
+
+brew update
+
 ```
 
 ### Maven (Java, Scala)
