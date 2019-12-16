@@ -1,10 +1,6 @@
 # Repositories in China
 How to config the python and scala mirrors
 
-## Tsinghua University mirrors (Ubuntu, Fedora, Arch, Debian)
-
-https://mirrors.tuna.tsinghua.edu.cn/
-
 
 ### Python
 #### pip 
@@ -24,11 +20,8 @@ conda update conda
 
 Add docker mirror
 ```
-https://registry.docker-cn.com
-https://docker.mirrors.ustc.edu.cn
-https://hub-mirror.c.163.com
 https://mirror.ccs.tencentyun.com
-http://f1361db2.m.daocloud.io
+
 ```
 
 ### brew
@@ -83,3 +76,4 @@ More mirrors
 * Northeastern University: http://mirror.neu.edu.cn/
 * Zhejiang University: http://mirrors.zju.edu.cn/
 * Neusoft Institute of Information: http://mirrors.neusoft.edu.cn/
+* Tencent: https://mirrors.tencent.com
