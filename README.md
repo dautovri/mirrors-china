@@ -24,7 +24,11 @@ conda update conda
 
 Add docker mirror
 ```
-docker --registry-mirror=https://registry.docker-cn.com daemon
+https://registry.docker-cn.com
+https://docker.mirrors.ustc.edu.cn
+https://hub-mirror.c.163.com
+https://mirror.ccs.tencentyun.com
+http://f1361db2.m.daocloud.io
 ```
 
 ### brew
