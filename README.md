@@ -20,7 +20,7 @@ conda update conda
 
 Add docker mirror
 ```
-http://f1361db2.m.daocloud.io
+http://registry.docker-cn.com
 ```
 
 ### brew
