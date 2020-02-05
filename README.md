@@ -1,4 +1,4 @@
-# Repositories in China
+# Repositories in China 🇨🇳
 How to config the python and scala mirrors
 
 
