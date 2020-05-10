@@ -2,6 +2,8 @@
 How to config the python and scala mirrors
 
 
+### All in one script https://tuna.moe/oh-my-tuna/  from https://github.com/tuna
+
 ### Python
 #### pip 
 ``` pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package ```
@@ -23,7 +25,7 @@ Add docker mirror
 http://registry.docker-cn.com
 ```
 
-### brew
+### brew (https://brew.sh )
 
 Add brew mirror 
 
@@ -51,6 +53,8 @@ Alibaba repo
         </repository>
 </repositories>
 ```
+
+### SBT 
 
 ~/.sbt/repositories
 
