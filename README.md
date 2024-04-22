@@ -35,6 +35,11 @@ Docker Hub Azure: https://dockerhub.azk8s.cn
 Azure Helm/Kubernetes:  http://mirror.azure.cn/kubernetes/
 
 
+### Jenkins 
+
+Azure Jenkins: http://mirror.azure.cn/jenkins/
+
+
 ### brew (https://brew.sh )
 
 Add brew mirror 
