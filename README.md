@@ -34,6 +34,10 @@ Docker Hub Azure: https://dockerhub.azk8s.cn
 
 Azure Helm/Kubernetes:  http://mirror.azure.cn/kubernetes/
 
+### Terraform 
+
+Alibaba Cloud Terraform: http://mirrors.aliyun.com/terraform/
+
 
 ### Jenkins 
 
