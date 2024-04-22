@@ -30,6 +30,11 @@ Docker Hub official: https://registry.docker-cn.com
 
 Docker Hub Azure: https://dockerhub.azk8s.cn
 
+### Helm 
+
+Azure Helm/Kubernetes:  http://mirror.azure.cn/kubernetes/
+
+
 ### brew (https://brew.sh )
 
 Add brew mirror 
