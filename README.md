@@ -1,5 +1,5 @@
 # Mirrors / Repositories in China 🇨🇳
-How to config the python and scala mirrors
+How to config the mirrors
 
 
 ### All in one script https://tuna.moe/oh-my-tuna/  from https://github.com/tuna
@@ -20,10 +20,15 @@ conda update conda
 
 ### Docker 
 
-Add docker mirror
-```
-http://registry.docker-cn.com
-```
+Quay.io: https://quay.azk8s.cn
+
+GCR: https://gcr.azk8s.cn
+
+K8S GCR images: https://registry.aliyuncs.com/google_containers
+
+Docker Hub official: https://registry.docker-cn.com
+
+Docker Hub Azure: https://dockerhub.azk8s.cn
 
 ### brew (https://brew.sh )
 
