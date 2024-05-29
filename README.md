@@ -1,6 +1,6 @@
 # Mirrors / Repositories in China 🇨🇳
 
-In Mainland China, using local mirrors for Ubuntu is essential due to the GF, which can significantly slow down or even block access to servers outside of China. By connecting to mirrors within Mainland China, you can get faster update speeds and a more reliable connection when downloading or updating software packages. Additionally, local mirrors are often synchronized with the main repositories, ensuring that you have access to the latest updates and security patches.
+In Mainland China, using local mirrors is essential due to the GF, which can significantly slow down or even block access to servers outside of China. By connecting to mirrors within Mainland China, you can get faster update speeds and a more reliable connection when downloading or updating software packages. Additionally, local mirrors are often synchronized with the main repositories, ensuring that you have access to the latest updates and security patches.
 
 
 ### All in one script https://tuna.moe/oh-my-tuna/  from https://github.com/tuna
