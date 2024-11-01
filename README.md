@@ -1,15 +1,32 @@
 # Mirrors / Repositories in China 🇨🇳
 
-In Mainland China, using local mirrors is essential due to the GF, which can significantly slow down or even block access to servers outside of China. By connecting to mirrors within Mainland China, you can get faster update speeds and a more reliable connection when downloading or updating software packages. Additionally, local mirrors are often synchronized with the main repositories, ensuring that you have access to the latest updates and security patches.
+In Mainland China, using local mirrors is essential due to the Great Firewall (GF), which can significantly slow down or even block access to servers outside of China. By connecting to mirrors within Mainland China, you can get faster update speeds and a more reliable connection when downloading or updating software packages. Additionally, local mirrors are often synchronized with the main repositories, ensuring that you have access to the latest updates and security patches.
 
+## Table of Contents
+- [Mirrors / Repositories in China 🇨🇳](#mirrors--repositories-in-china-)
+  - [Table of Contents](#table-of-contents)
+  - [All in One Script](#all-in-one-script)
+  - [Python](#python)
+    - [pip](#pip)
+    - [conda](#conda)
+  - [Docker](#docker)
+  - [Helm](#helm)
+  - [Terraform](#terraform)
+  - [Jenkins](#jenkins)
+  - [Homebrew (https://brew.sh )](#homebrew-httpsbrewsh-)
+  - [Maven (Java, Scala)](#maven-java-scala)
+  - [SBT](#sbt)
+  - [More mirrors](#more-mirrors)
 
-### All in one script https://tuna.moe/oh-my-tuna/  from https://github.com/tuna
+## All in One Script
+- [Oh My Tuna](https://tuna.moe/oh-my-tuna/) from [TUNA](https://github.com/tuna)
 
-### Python
-#### pip 
+## Python
+
+### pip
 ``` pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package ```
 
-#### conda
+### conda
 ```
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
@@ -19,7 +36,7 @@ conda config --set show_channel_urls yes
 conda update conda 
 ```
 
-### Docker 
+## Docker 
 
 Quay.io: https://quay.azk8s.cn
 
@@ -31,24 +48,24 @@ Docker Hub official: https://registry.docker-cn.com
 
 Docker Hub Azure: https://dockerhub.azk8s.cn
 
-### Helm 
+## Helm 
 
 Azure Helm/Kubernetes:  http://mirror.azure.cn/kubernetes/
 
 Alibaba Cloud: https://mirrors.aliyun.com/kubernetes-new/
 
 
-### Terraform 
+## Terraform 
 
 Alibaba Cloud Terraform: http://mirrors.aliyun.com/terraform/
 
 
-### Jenkins 
+## Jenkins 
 
 Azure Jenkins: http://mirror.azure.cn/jenkins/
 
 
-### brew (https://brew.sh )
+## Homebrew (https://brew.sh )
 
 Add brew mirror 
 
@@ -62,7 +79,7 @@ git -C "$(brew --repo homebrew/cask)" remote set-url origin https://mirrors.tuna
 brew update
 ```
 
-### Maven (Java, Scala)
+## Maven (Java, Scala)
 
 Alibaba repo 
 ```http://maven.aliyun.com/nexus/content/groups/public/```
@@ -77,7 +94,7 @@ Alibaba repo
 </repositories>
 ```
 
-### SBT 
+## SBT 
 
 ~/.sbt/repositories
 
@@ -91,7 +108,7 @@ maven-central
 sonatype-oss-snapshots
 ```
 
-More mirrors 
+## More mirrors 
 
 * Alibaba：http://mirrors.aliyun.com/
 * NetEase：http://mirrors.163.com/
