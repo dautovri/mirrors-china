@@ -120,3 +120,9 @@ sonatype-oss-snapshots
 * Zhejiang University: http://mirrors.zju.edu.cn/
 * Neusoft Institute of Information: http://mirrors.neusoft.edu.cn/
 * Tencent: https://mirrors.tencent.com
+* Tsinghua University: https://mirrors.tuna.tsinghua.edu.cn/
+* Beijing Foreign Studies University: http://mirrors.bfsu.edu.cn/
+* Lanzhou University: http://mirror.lzu.edu.cn/
+* Harbin Institute of Technology: http://mirrors.hit.edu.cn/
+* Nanjing University: http://mirrors.nju.edu.cn/
+* China University of Geosciences: http://mirrors.cug.edu.cn/
