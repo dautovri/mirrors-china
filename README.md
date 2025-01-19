@@ -16,6 +16,10 @@ In Mainland China, using local mirrors is essential due to the Great Firewall (G
   - [Homebrew (https://brew.sh )](#homebrew-httpsbrewsh-)
   - [Maven (Java, Scala)](#maven-java-scala)
   - [SBT](#sbt)
+  - [NPM (Node.js / JavaScript)](#npm-nodejs--javascript)
+  - [Yarn](#yarn)
+  - [Gradle (Java)](#gradle-java)
+  - [Containerd](#containerd)
   - [More mirrors](#more-mirrors)
 
 ## All in One Script
@@ -106,6 +110,38 @@ typesafe: http://repo.typesafe.com/typesafe/ivy-releases/, [organization]/[modul
 sonatype-oss-releases
 maven-central
 sonatype-oss-snapshots
+```
+
+## NPM (Node.js / JavaScript)
+To configure npm to use a mirror:
+```
+npm config set registry https://registry.npmmirror.com/
+npm config get registry
+```
+
+## Yarn
+To configure Yarn to use a mirror:
+```
+yarn config set registry https://registry.npmmirror.com/
+yarn config get registry
+```
+
+## Gradle (Java)
+Add in your project's root Gradle settings:
+```
+repositories {
+    maven {
+        url "https://maven.aliyun.com/nexus/content/groups/public/"
+    }
+    // ...existing Gradle repositories...
+}
+```
+
+## Containerd
+You can configure a registry mirror in the containerd config file:
+```
+[plugins."io.containerd.grpc.v1.cri".registry.mirrors."docker.io"]
+  endpoint = ["https://mirror.ccs.tencentyun.com"]
 ```
 
 ## More mirrors 
