@@ -20,7 +20,20 @@ In Mainland China, using local mirrors is essential due to the Great Firewall (G
   - [Yarn](#yarn)
   - [Gradle (Java)](#gradle-java)
   - [Containerd](#containerd)
+  - [Ruby/RubyGems](#rubyrubygems)
+  - [Rust/Cargo](#rustcargo)
+  - [Go/GoProxy](#gogoproxy)
+  - [Flutter/Dart](#flutterdart)
+  - [APT/Ubuntu](#aptubuntu)
+  - [YUM/CentOS](#yumcentos)
+  - [Git](#git)
   - [More mirrors](#more-mirrors)
+  - [Additional Resources](#additional-resources)
+    - [Mirror Testing Tools](#mirror-testing-tools)
+    - [Official Mirror Lists](#official-mirror-lists)
+    - [Development Environment Setup](#development-environment-setup)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 ## All in One Script
 - [Oh My Tuna](https://tuna.moe/oh-my-tuna/) from [TUNA](https://github.com/tuna)
@@ -144,6 +157,125 @@ You can configure a registry mirror in the containerd config file:
   endpoint = ["https://mirror.ccs.tencentyun.com"]
 ```
 
+## Ruby/RubyGems
+To configure RubyGems to use a Chinese mirror:
+```bash
+# Remove default source
+gem sources --remove https://rubygems.org/
+
+# Add Chinese mirror
+gem sources -a https://mirrors.tuna.tsinghua.edu.cn/rubygems/
+
+# Verify sources
+gem sources -l
+
+# For Bundler
+bundle config mirror.https://rubygems.org https://mirrors.tuna.tsinghua.edu.cn/rubygems
+```
+
+## Rust/Cargo
+Configure Cargo to use Chinese mirrors by editing `~/.cargo/config`:
+```toml
+[source.crates-io]
+registry = "https://github.com/rust-lang/crates.io-index"
+replace-with = 'tuna'
+
+[source.tuna]
+registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
+
+[source.ustc]
+registry = "git://mirrors.ustc.edu.cn/crates.io-index"
+
+[source.sjtu]
+registry = "https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index"
+
+[source.rustcc]
+registry = "https://code.aliyun.com/rustcc/crates.io-index.git"
+```
+
+## Go/GoProxy
+Configure Go modules proxy for faster downloads:
+```bash
+# Set GOPROXY
+export GOPROXY=https://goproxy.cn,direct
+
+# Or use Alibaba mirror
+export GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
+
+# Set GOSUMDB
+export GOSUMDB=sum.golang.google.cn
+
+# For permanent configuration, add to ~/.bashrc or ~/.zshrc
+echo "export GOPROXY=https://goproxy.cn,direct" >> ~/.bashrc
+echo "export GOSUMDB=sum.golang.google.cn" >> ~/.bashrc
+```
+
+## Flutter/Dart
+Configure Flutter to use Chinese mirrors:
+```bash
+# Set Flutter mirrors
+export PUB_HOSTED_URL=https://pub.flutter-io.cn
+export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+
+# For permanent configuration
+echo "export PUB_HOSTED_URL=https://pub.flutter-io.cn" >> ~/.bashrc
+echo "export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn" >> ~/.bashrc
+
+# Alternative Tsinghua mirrors
+export PUB_HOSTED_URL=https://mirrors.tuna.tsinghua.edu.cn/dart-pub/
+export FLUTTER_STORAGE_BASE_URL=https://mirrors.tuna.tsinghua.edu.cn/flutter
+```
+
+## APT/Ubuntu
+Configure APT to use Chinese mirrors for Ubuntu:
+```bash
+# Backup original sources.list
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
+
+# Replace with Tsinghua mirror (Ubuntu 20.04 example)
+sudo tee /etc/apt/sources.list <<EOF
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+EOF
+
+# Update package list
+sudo apt update
+```
+
+## YUM/CentOS
+Configure YUM to use Chinese mirrors for CentOS:
+```bash
+# Backup original repo files
+sudo cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
+
+# Download Alibaba mirror configuration
+sudo wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+
+# Or manually configure with Tsinghua mirror
+sudo sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-Base.repo
+sudo sed -i 's|#baseurl=http://mirror.centos.org|baseurl=https://mirrors.tuna.tsinghua.edu.cn|g' /etc/yum.repos.d/CentOS-Base.repo
+
+# Clean and update cache
+sudo yum clean all
+sudo yum makecache
+```
+
+## Git
+Configure Git to use Chinese mirrors for faster clone speeds:
+```bash
+# GitHub mirror
+git config --global url."https://hub.fastgit.xyz/".insteadOf "https://github.com/"
+
+# Or use gitclone.com
+git config --global url."https://gitclone.com/github.com/".insteadOf "https://github.com/"
+
+# Reset to original (if needed)
+git config --global --unset url."https://hub.fastgit.xyz/".insteadOf
+```
+
+
 ## More mirrors 
 
 * Alibaba：http://mirrors.aliyun.com/
@@ -162,3 +294,33 @@ You can configure a registry mirror in the containerd config file:
 * Harbin Institute of Technology: http://mirrors.hit.edu.cn/
 * Nanjing University: http://mirrors.nju.edu.cn/
 * China University of Geosciences: http://mirrors.cug.edu.cn/
+* Huazhong University of Science and Technology: http://mirrors.hust.edu.cn/
+* Dalian University of Technology: http://mirror.dlut.edu.cn/
+* Beijing University of Posts and Telecommunications: http://mirrors.bupt.edu.cn/
+* Chongqing University: http://mirrors.cqu.edu.cn/
+* South China University of Technology: http://mirrors.scut.edu.cn/
+* Tianjin University: http://mirror.tju.edu.cn/
+* Xidian University: http://linux.xidian.edu.cn/mirrors/
+
+## Additional Resources
+
+### Mirror Testing Tools
+- [Mirror Speed Test](https://ping.chinaz.com/) - Test speed to different mirrors
+- [Best Mirror](https://www.speedtest.cn/) - Network speed testing
+
+### Official Mirror Lists
+- [TUNA Mirror Help](https://mirrors.tuna.tsinghua.edu.cn/help/) - Comprehensive setup guides
+- [USTC Mirror Help](https://mirrors.ustc.edu.cn/help/) - University of Science and Technology of China mirrors
+- [Alibaba Mirror Help](https://mirrors.aliyun.com/) - Alibaba Cloud mirrors documentation
+
+## Contributing
+
+Feel free to contribute by:
+1. Adding new mirrors or repositories
+2. Updating existing mirror URLs
+3. Adding setup instructions for new tools
+4. Reporting broken mirrors
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
